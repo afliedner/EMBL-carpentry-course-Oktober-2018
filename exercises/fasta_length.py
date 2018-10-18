@@ -30,4 +30,16 @@ fasta_sequence_lengths.append(sequence_length)
 # Closing the file:
 fastafile.close()
 
-print(sorted(fasta_sequence_lengths))
+print(max(fasta_sequence_lengths))
+
+def evaluate(input):
+"""
+calculates and print the maximum length as well as the minimum length of the files in the .fasta file,
+also prints all lengths in a sorted way.
+Takes the fasta_sequence_length as input.
+Call for example evaluate(fasta_sequence_lengths)
+"""
+    print("The maximum is {} and the minimum is {}.".format(max(input), min(input)))
+    print("The sorted List is {}.".format(sorted(input)))
+
+evaluate(fasta_sequence_lengths)
